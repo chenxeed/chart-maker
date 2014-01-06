@@ -1,0 +1,83 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chart Maker</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <h1>SIMPLE CHART MAKER</h1>
+        <h6>Copyright by ChenX 2013</h6>
+
+        <div class="control">
+			<div class='error-message' id='errorMsg'></div>
+			<div>
+				<div class="input-title">
+					Chart Title :
+					<input type="text" id="inputChartTitle" size="50" maxlength="50" value="Input Your Chart Title Here" />
+				</div>
+				<button onclick="addData();">[+]</button>
+			</div>
+			<div class="input-form data">
+				<table id="inputForm">
+				</table>
+			</div>
+
+			<div class="col-2">
+				<h2>PIE CHART OPTION</h2>
+				<div class="input-form">
+					<table>
+						<tr>
+							<td>
+								<b>Circle Size</b><br>
+								<i>Between : 100-180</i>
+							</td>
+							<td><input type="text" id="inputPieR" /></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<a href="#chartWrapper"><button onclick="generateChart('Pie');">Generate</button></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="col-2">
+				<h2>LINE CHART OPTION</h2>
+				<div class="input-form">
+					<table>
+						<tr>
+							<td>
+								<b>Max Value on Line Chart</b><br>
+								<i>Must be higher than data's highest value</i>
+							</td>
+							<td><input type="text" id="inputHighestValue" value="100" /></td>
+						</tr>
+						<tr>
+							<td>
+								<b>Random Color on Icon</b><br>
+								<i>Only applied on highest data value below 10</i>
+							</td>
+							<td><input type="checkbox" id="inputRandomColor" value='1' /></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<a href="#chartWrapper"><button onclick="generateChart('Line');">Generate</button></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+        </div>
+
+        <div class="chart-wrapper" id="chartWrapper">
+			
+        </div>
+
+        <script type='text/javascript' src='chart.js' ></script>
+    </body>
+</html>

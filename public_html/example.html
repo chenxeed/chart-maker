@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simple SVG Pie Chart</title>
+    <script type="text/javascript" src="raphael.js"></script>
+    <script type="text/javascript">
+        var paper;
+        var arc;
+        var colorArr = ["#468966","#FFF0A5","#FFB03B","#B64926","#8E2800"];
+        var pieData = [113,100,50,28,27];
+        var sectorAngleArr = [];
+        var total = 0;
+        var startAngle = 0;
+        var endAngle = 0;
+        var x1,x2,y1,y2 = 0;
+
+        function init(){
+            paper = Raphael("holder");
+            //CALCULATE THE TOTAL
+            for(var k=0; k < pieData.length; k++){
+                total += pieData[k];
+            }
+            //CALCULATE THE ANGLES THAT EACH SECTOR SWIPES AND STORE IN AN ARRAY
+            for(var i=0; i < pieData.length; i++){
+                var angle = Math.ceil(360 * pieData[i]/total);
+                sectorAngleArr.push(angle);
+            }
+            drawArcs();
+        }               
+
+        function drawArcs(){
+            for(var i=0; i <sectorAngleArr.length; i++){
+                startAngle = endAngle;
+                endAngle = startAngle + sectorAngleArr[i];
+
+                x1 = parseInt(200 + 180*Math.cos(Math.PI*startAngle/180));
+                y1 = parseInt(200 + 180*Math.sin(Math.PI*startAngle/180));
+
+                x2 = parseInt(200 + 180*Math.cos(Math.PI*endAngle/180));
+                y2 = parseInt(200 + 180*Math.sin(Math.PI*endAngle/180));                
+
+                var d = "M200,200  L" + x1 + "," + y1 + "  A180,180 0 0,1 " + x2 + "," + y2 + " z"; //1 means clockwise
+                alert(d);
+                arc = paper.path(d);
+                arc.attr("fill",colorArr[i]);
+            }
+        }
+    </script>
+</head>
+<body onload="init();">
+    <div id="holder" style="width:600px; height:400px;">
+
+    </div>
+</body>
+</html>
