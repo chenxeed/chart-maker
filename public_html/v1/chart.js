@@ -129,7 +129,6 @@ function addData() {
 		input_icon.appendChild(opt_icon);
 	}
 	input_icon.id = 'inputIcon' + input_count;
-	input_icon.value = "10";
 	new_col_icon.appendChild(input_icon);
 
 	//Set input color with preview
@@ -359,7 +358,7 @@ function dragChart(groupObject) {
 function resizeChart(groupObject) {
 	var x = 0, y=0, range = 0, currentScale = 1;
 	var resize = document.createElementNS("http://www.w3.org/2000/svg", 'image');
-	resize.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'icon/resize.svg');
+	resize.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '../icon/resize.svg');
 	resize.setAttribute('width', 100);
 	resize.setAttribute('height', 30);
 	resize.setAttribute('stroke', 'black');
@@ -633,7 +632,7 @@ function generateStatistic() {
 
 	//Create delete button
 	var chartDelete = document.createElementNS("http://www.w3.org/2000/svg", 'image');
-	chartDelete.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'icon/delete.svg');
+	chartDelete.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '../icon/delete.svg');
 	chartDelete.setAttribute('class', 'chart-button');
 	chartDelete.setAttribute('onclick', 'deleteChart(this)');
 	chartDelete.setAttribute('x', deleteX);

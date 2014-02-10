@@ -1,0 +1,86 @@
+/* 
+    Document   : style
+    Created on : Jan 3, 2014, 3:58:08 PM
+    Author     : ChenX
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body { 
+    display: block;
+    width: 100%;
+	margin: 0;
+    background: aliceblue;
+}
+
+h1, h6 {
+	margin: 5px 0;
+    text-align: center;
+}
+
+.chart-wrapper {
+    width: 100%;
+	text-align: center;
+}
+.chart-canvas {
+	display: none;
+	border: 2px solid;
+	background: white;
+}
+.chart-button {
+	cursor: pointer;
+}
+
+.piechart {
+    stroke: red;
+    fill: blue;
+}
+.input-title {
+	font-size: 24px;
+	text-align: center;
+}
+.control {
+	position: relative;
+    width: 780px; margin: auto;
+    padding: 10px;
+    background: black; color: white;
+    font-family: monospace;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 0 10px #333333;
+}
+.error-message {
+	display: none;
+	position: absolute; left: 10%; z-index: 5;
+	width: 78%; padding: 1%;
+	background: red; color: white;
+	box-shadow: 0 0 10px white;
+}
+
+.input-form {
+	width: 780px; min-height: 200px; margin: auto; overflow: auto;
+	background: windowframe; box-shadow: 0 0 5px black;
+}
+.input-form table { width: 100%; }
+.input-form td { padding: 5px; }
+.input-form tr:nth-child(odd) { background: #666666; }
+.input-form tr:nth-child(even) { background: #333333; }
+.input-form td input{
+	width: 100%;
+}
+.input-form td .wrap {
+	position: relative;
+}
+.input-form td .color-preview {
+	width: 50px; height: 15px;
+	position: absolute; right: 0; top: 0;
+}
+.input-form td .color-random {
+	font-size: 10px; padding: 0 1px;
+}
+.input-form.data { height: 230px; }
+
+.col-2 {
+	width: 45%; margin: 1%; padding: 1%;
+	display: inline-block;
+	vertical-align: top;
+}
