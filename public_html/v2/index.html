@@ -32,15 +32,18 @@ and open the template in the editor.
         <h6>Copyright by ChenX 2013</h6>
 
 		<div class="control">
+			<div class='error-message' id='errorMsg'></div>
 			<button onclick="addNew()" title="Add New Chart">[+]</button>
 			<select id="listChart"></select>
 		</div>
 
 		<div class="input-form data">
-			<div id="chartTitle">- Add Your New Chart -</div>
+			<div id="chartTitle" class="input-title">- Add Your New Chart -</div>
 			<button id="addChartData" style="display:none">[+]</button>
 			<table id="inputForm">
 			</table>
+			<button id="generatePieData" style="display:none">Generate Pie Chart</button>
+			<button id="generateLineData" style="display:none">Generate Line Chart</button>
 		</div>
 
 
