@@ -1,3 +1,8 @@
+// Copyright by ChenX @ 2014
+// Contact me for support at
+// email : chenxeed@gmail.com
+// github : chenxeed
+
 //Variable for All Chart
 var canvasWidth = 800;
 var canvasHeight = 450;
@@ -140,7 +145,7 @@ function addNew() {
 	var elmNewOption = document.createElement('option');
 	elmNewOption.id = 'option-' + chart_id;
 	elmNewOption.setAttribute('value', chart_id);
-	elmNewOption.setAttribute('selected');
+	elmNewOption.setAttribute('selected','1');
 	elmNewOption.innerHTML = chart_name;
 	elmListChart.appendChild(elmNewOption);
 
@@ -241,7 +246,7 @@ function addData(input_count, chart_object) {
 		opt_icon.value = icon;
 		opt_icon.innerHTML = icon;
 		if (icon === icon_value)
-			opt_icon.setAttribute('selected');
+			opt_icon.setAttribute('selected','1');
 		input_icon.appendChild(opt_icon);
 	}
 	input_icon.id = 'inputIcon' + input_count;

@@ -1,3 +1,8 @@
+// Copyright by ChenX @ 2014
+// Contact me for support at
+// email : chenxeed@gmail.com
+// github : chenxeed
+
 //Variable for All Chart
 var canvasWidth = 800;
 var canvasHeight = 450;
